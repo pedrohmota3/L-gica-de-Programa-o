@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int total, nota;
+    int notas100, notas50, notas20, notas10, notas5;
+    float salario1, salario2;
+
+    printf("Digite o salario da empregada domestica: R$ ");
+    scanf("%f", &salario1);
+
+    printf("Digite o salario da baba: R$ ");
+    scanf("%f", &salario2);
+
+    total = (int)(salario1 + salario2);
+
+    notas100 = total / 100;
+    total %= 100;
+
+    notas50 = total / 50;
+    total %= 50;
+
+    notas20 = total / 20;
+    total %= 20;
+
+    notas10 = total / 10;
+    total %= 10;
+
+    notas5 = total / 5;
+    total %= 5;
+
+
+    printf("\nNotas necessarias para o pagamento:\n");
+    if (notas100) printf("%d nota(s) de R$ 100\n", notas100);
+    if (notas50)  printf("%d nota(s) de R$ 50\n", notas50);
+    if (notas20)  printf("%d nota(s) de R$ 20\n", notas20);
+    if (notas10)  printf("%d nota(s) de R$ 10\n", notas10);
+    if (notas5)   printf("%d nota(s) de R$ 5\n", notas5);
+
+    return 0;
+}
