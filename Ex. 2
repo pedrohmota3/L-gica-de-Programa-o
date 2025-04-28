@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float saldo, valor;
+
+    printf("Digite o saldo inicial da conta (R$): ");
+    scanf("%f", &saldo);
+
+    printf("Digite o valor do salario (R$): ");
+    scanf("%f", &valor);
+    saldo += valor;
+    printf("Saldo apos deposito do salario (R$): %.2f\n", saldo);
+
+    printf("Digite o valor da primeira retirada (R$): ");
+    scanf("%f", &valor);
+    saldo -= valor;
+    printf("Saldo apos primeira retirada (R$): %.2f\n", saldo);
+
+    printf("Digite o valor da segunda retirada (R$): ");
+    scanf("%f", &valor);
+    saldo -= valor;
+    printf("Saldo apos segunda retirada (R$): %.2f\n", saldo);
+
+    printf("Digite o valor da terceira retirada (R$): ");
+    scanf("%f", &valor);
+    saldo -= valor;
+    printf("Saldo apos terceira retirada (R$): %.2f\n", saldo);
+
+    printf("Saldo final da conta (R$): %.2f\n", saldo);
+
+return 0;
+}
