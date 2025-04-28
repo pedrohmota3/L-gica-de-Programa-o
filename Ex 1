@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+const double PI = 3.1415926;
+float resultado_seno, resultado_cosseno, resultado_tangente, resultado_angulo, angulo;
+float seno_angulo (float cateto_oposto, float hipotenusa);
+float cosseno_angulo (float cateto_adjacente, float hipotenusa);
+float tangente_angulo (float cateto_oposto, float cateto_adjacente);
+float valor_angulo (float valor_seno);
+float cos_angulo (float valor_cosseno);
+float tan_angulo (float valor_tangente);
+
+int main()
+{
+    resultado_seno = seno_angulo(3,5);
+    printf (" O resultado do calculo do seno e: %.2f\n", resultado_seno);
+
+    resultado_cosseno = cosseno_angulo (4,5);
+    printf(" O resultado do calculo do cosseno e: %.2f\n", resultado_cosseno);
+
+    resultado_tangente = tangente_angulo(3,4);
+    printf (" O resultado do calculo da tangente e: %.2f\n", resultado_tangente);
+
+    resultado_angulo = valor_angulo (1);
+    printf ("O valor do angulo e: %.2f\n", resultado_angulo);
+
+    resultado_angulo = cos_angulo (0);
+    printf ("O valor do angulo e: %.2f\n", resultado_angulo);
+
+    resultado_angulo = tan_angulo (1);
+    printf ("O valor do angulo e: %.2f\n", resultado_angulo);
+    return 0;
+}
+
+float seno_angulo(float cateto_oposto, float hipotenusa){
+    float sin_angulo;
+    sin_angulo = cateto_oposto/hipotenusa;
+    return sin_angulo;
+}
+
+float cosseno_angulo (float cateto_adjacente, float hipotenusa){
+    float cos_angulo = cateto_adjacente/hipotenusa;
+    return cos_angulo;
+}
+
+float tangente_angulo (float cateto_oposto, float cateto_adjacente){
+    float tan_angulo = cateto_oposto/cateto_adjacente;
+    return tan_angulo;
+}
+
+float valor_angulo (float valor_seno){
+    float arco_seno;
+    arco_seno = asin(valor_seno)*180/PI;
+    return arco_seno;
+}
+
+float cos_angulo (float valor_cosseno){
+    float arco_cosseno;
+    arco_cosseno = acos(valor_cosseno)*180/PI;
+    return arco_cosseno;
+}
+
+float tan_angulo (float valor_tangente){
+    float arco_tangente;
+    arco_tangente = atan(valor_tangente)*180/PI;
+    return arco_tangente;
+}
