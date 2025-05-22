@@ -1,0 +1,44 @@
+#include <iostream>
+
+int aula, professor, indicacao;
+char disciplina[20];
+
+int main()
+{
+        printf("\n Avalie o seu professor. \n");
+        scanf("%d", &professor);
+
+    if(professor >= 5){
+        printf("\n O professor e bom!\n");
+    }
+
+    else {
+        printf("\n O professor nao e bom! \n");
+    }
+
+        printf("\n Avalie a aula. \n");
+        scanf("%d", &aula);
+
+    if(aula >= 5){
+        printf("\n A aula e boa!\n");
+    }
+    else {
+        printf("\n O professor deve mudar a sua didatica! \n");
+    }
+
+        printf("\n Qual e o nome da disciplina? \n");
+        scanf("%s", disciplina);
+
+        printf("\n Digite 1 se vc indicaria a disciplina e 0 se nao indicaria. \n");
+        scanf("%d", &indicacao);
+
+    if (indicacao == 1){
+        printf("\n Voce indica! \n");
+    }
+
+    else{
+        printf("\n Voce nao indica! \n");
+    }
+
+    return 0;
+}
