@@ -1,0 +1,28 @@
+#include <iostream>
+
+int filme1, filme2;
+
+int main()
+{
+        printf("\n Avalie o filme Homem de Ferro. \n");
+        scanf ("%d", &filme1);
+
+   if (filme1 >= 7){
+        printf ("\n Avalie o filme Gladiador. \n");
+        scanf ("%d", &filme2);
+   }
+
+   else {
+        printf("\n Fim da avaliacao! \n");
+   }
+
+   if (filme1 > filme2){
+        printf("\n O filme do Homem de Ferro e melhor! \n");
+   }
+
+   else {
+        printf("\n O filme Gladiador e melhor! \n");
+   }
+
+    return 0;
+}
