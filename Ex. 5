@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int logado, produto, saldo, compra, frete;
+
+int main()
+{
+    printf("\nDigite 1 para usuario logado e 0 para usuario nao logado:\n");
+    scanf("%d", &logado);
+
+    if (logado == 1) {
+        printf("\nO usuario esta logado!\n");
+
+        printf("\nDigite 1 para produto disponivel e 0 para produto indisponivel:\n");
+        scanf("%d", &produto);
+
+        if (produto == 1) {
+            printf("\nHa produto em estoque!\n");
+        } else {
+            printf("\nEstoque indisponivel.\n");
+            return 0;
+        }
+
+        printf("\nDigite 1 para saldo suficiente e 0 para saldo insuficiente:\n");
+        scanf("%d", &saldo);
+
+        if (saldo == 1) {
+            printf("\nHa saldo suficiente!\n");
+
+            printf("\nDigite 1 para comprar o produto:\n");
+            scanf("%d", &compra);
+
+            if (compra == 1) {
+                printf("\nProduto comprado!\n");
+
+                printf("\nDigite 1 para frete expresso e 0 para frete seguro:\n");
+                scanf("%d", &frete);
+
+                if (frete == 1) {
+                    printf("\nFrete expresso adicionado!\n");
+                } else if (frete == 0) {
+                    printf("\nFrete seguro adicionado!\n");
+                } else {
+                    printf("\nOpção de frete invalida.\n");
+                }
+            } else {
+                printf("\nCompra nao realizada.\n");
+            }
+
+        } else {
+            printf("\nNao ha saldo suficiente.\n");
+        }
+
+    } else {
+        printf("\nO usuario nao esta logado.\n");
+    }
+
+    return 0;
+}
